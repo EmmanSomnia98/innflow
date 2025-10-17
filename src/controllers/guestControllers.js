@@ -3,10 +3,11 @@ const guest = require('../models/guestModels');
 // Get all Guests
 exports.getGuests = async (_req, res) => {
     try {
-        const Guests = await guest.find();
-        res.json(Guests);
+        const guests = await guest.find();
+        res.json(guests);
     } catch (err) {
-        res.status(500).json({ error: err.message });
+        console.error('Error fetching guests:', err.message);
+        res.status(500).json({ error: 'Server error' });
     }
 };
 

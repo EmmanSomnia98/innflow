@@ -1,0 +1,1353 @@
+{
+	"info": {
+		"_postman_id": "3f024ce8-f9cb-4104-b384-e5e891b7fe26",
+		"name": "InnFlow API Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46034484"
+	},
+	"item": [
+		{
+			"name": "Retrieve Guests",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/guests",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"guests"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Guests",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/guests/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"guests",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "541"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"21d-MducKQ8Ppqx7ZAOoYNGzswQK4lI\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Oct 2025 01:29:27 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"68f199ecf7439e3aeddfc789\",\n        \"name\": \"Alexander\",\n        \"email\": \"alexander98@example.com\",\n        \"age\": 26,\n        \"createdAt\": \"2025-10-17T01:20:44.568Z\",\n        \"updatedAt\": \"2025-10-17T01:20:44.568Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"68f19a4af7439e3aeddfc78b\",\n        \"name\": \"Emmanuel\",\n        \"email\": \"emmansomnia98@example.com\",\n        \"age\": 26,\n        \"createdAt\": \"2025-10-17T01:22:18.342Z\",\n        \"updatedAt\": \"2025-10-17T01:22:18.342Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"68f19b07f7439e3aeddfc78e\",\n        \"name\": \"Yuki\",\n        \"email\": \"yuki98@example.com\",\n        \"age\": 12,\n        \"createdAt\": \"2025-10-17T01:25:27.604Z\",\n        \"updatedAt\": \"2025-10-17T01:25:27.604Z\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "New Guest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Yuki\",\r\n    \"email\": \"yuki98@example.com\",\r\n    \"age\": \"12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/guests",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"guests"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Guest_Emmanuel",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Emmanuel\",\r\n    \"email\": \"emmansomnia98@example.com\",\r\n    \"age\": \"26\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/guests",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"guests"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "183"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b7-ZC35QbyJxvDhkfXEnYI9Kt8j8co\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Oct 2025 01:22:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Emmanuel\",\n    \"email\": \"emmansomnia98@example.com\",\n    \"age\": 26,\n    \"_id\": \"68f19a4af7439e3aeddfc78b\",\n    \"createdAt\": \"2025-10-17T01:22:18.342Z\",\n    \"updatedAt\": \"2025-10-17T01:22:18.342Z\",\n    \"__v\": 0\n}"
+				},
+				{
+					"name": "Guest_Yuki",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Yuki\",\r\n    \"email\": \"yuki98@example.com\",\r\n    \"age\": \"12\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/guests",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"guests"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "172"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ac-r0Sft+SbSASmEdhbHgbiMAcuDGs\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Oct 2025 01:25:27 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Yuki\",\n    \"email\": \"yuki98@example.com\",\n    \"age\": 12,\n    \"_id\": \"68f19b07f7439e3aeddfc78e\",\n    \"createdAt\": \"2025-10-17T01:25:27.604Z\",\n    \"updatedAt\": \"2025-10-17T01:25:27.604Z\",\n    \"__v\": 0\n}"
+				},
+				{
+					"name": "Guest_Alexander",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Alexander\",\r\n    \"email\": \"alexander98@example.com\",\r\n    \"age\": \"26\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/guests",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"guests"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "182"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b6-9FCwiAvfzoDw/xXObU9bCATi73A\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Oct 2025 09:16:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Alexander\",\n    \"email\": \"alexander98@example.com\",\n    \"age\": 26,\n    \"_id\": \"68f209533a0e5310b6187a2b\",\n    \"createdAt\": \"2025-10-17T09:16:03.110Z\",\n    \"updatedAt\": \"2025-10-17T09:16:03.110Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Guest",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/guests/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"guests",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "68f19b07f7439e3aeddfc78e"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Guest_Yuki",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/guests/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"guests",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "68f19b07f7439e3aeddfc78e"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "27"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1b-pzj2nY9Q0XBdIR5y8lO3W+qRti8\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Oct 2025 09:11:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Guest deleted\"\n}"
+				},
+				{
+					"name": "Delete Guest_Alexander",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/guests/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"guests",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "68f199ecf7439e3aeddfc789"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "27"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1b-pzj2nY9Q0XBdIR5y8lO3W+qRti8\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Oct 2025 09:15:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Guest deleted\"\n}"
+				},
+				{
+					"name": "Delete Guest_Emmanuel",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/guests/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"guests",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "68f19a4af7439e3aeddfc78b"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "27"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1b-pzj2nY9Q0XBdIR5y8lO3W+qRti8\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Oct 2025 09:31:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Guest deleted\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Retrieve Rooms",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/rooms/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"rooms",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Rooms",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/rooms/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"rooms",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "408"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"198-DvM8jwVw0zjWBn8zCIR/kaXllkQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Oct 2025 09:14:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"68f1ef195b00d3721a140e61\",\n        \"number\": \"123\",\n        \"type\": \"Deluxe Double-bed Suite\",\n        \"price\": 1200,\n        \"status\": \"available\",\n        \"createdAt\": \"2025-10-17T07:24:09.811Z\",\n        \"updatedAt\": \"2025-10-17T07:24:09.811Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"68f1f6fa18fe9dc9b4711bc2\",\n        \"number\": \"104\",\n        \"type\": \"Standard Double-bed Suite\",\n        \"price\": 1000,\n        \"status\": \"occupied\",\n        \"createdAt\": \"2025-10-17T07:57:46.303Z\",\n        \"updatedAt\": \"2025-10-17T07:57:46.303Z\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Available Room",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"number\": \"123\",\r\n    \"type\": \"Deluxe Double-bed Suite\",\r\n    \"price\": \"1200\",\r\n    \"status\": \"available\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/rooms/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"rooms",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Room_123",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"number\": \"123\",\r\n    \"type\": \"Deluxe Double-bed Suite\",\r\n    \"price\": \"1200\",\r\n    \"status\": \"available\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/rooms/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"rooms",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "202"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ca-4xyEd9StQRxy+RXKOxq23cgONYY\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Oct 2025 07:24:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"number\": \"123\",\n    \"type\": \"Deluxe Double-bed Suite\",\n    \"price\": 1200,\n    \"status\": \"available\",\n    \"_id\": \"68f1ef195b00d3721a140e61\",\n    \"createdAt\": \"2025-10-17T07:24:09.811Z\",\n    \"updatedAt\": \"2025-10-17T07:24:09.811Z\",\n    \"__v\": 0\n}"
+				},
+				{
+					"name": "Room_153",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"number\": \"153\",\r\n    \"type\": \"Deluxe Double-bed Suite\",\r\n    \"price\": \"1200\",\r\n    \"status\": \"occupied\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/rooms/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"rooms",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "201"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c9-9Yj0LnWA6w3frIgDRSsuq5U3VAM\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Oct 2025 09:28:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"number\": \"153\",\n    \"type\": \"Deluxe Double-bed Suite\",\n    \"price\": 1200,\n    \"status\": \"occupied\",\n    \"_id\": \"68f20c513a0e5310b6187a31\",\n    \"createdAt\": \"2025-10-17T09:28:49.144Z\",\n    \"updatedAt\": \"2025-10-17T09:28:49.144Z\",\n    \"__v\": 0\n}"
+				},
+				{
+					"name": "Room_104",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"number\": \"104\",\r\n    \"type\": \"Standard Single-bed Suite\",\r\n    \"price\": \"1200\",\r\n    \"status\": \"occupied\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/rooms/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"rooms",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "203"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"cb-Zt+z2BdTAioMKtneLPYZ1MSRy/w\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Oct 2025 09:41:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"number\": \"104\",\n    \"type\": \"Standard Single-bed Suite\",\n    \"price\": 1200,\n    \"status\": \"occupied\",\n    \"_id\": \"68f20f4b3a0e5310b6187a4c\",\n    \"createdAt\": \"2025-10-17T09:41:31.543Z\",\n    \"updatedAt\": \"2025-10-17T09:41:31.543Z\",\n    \"__v\": 0\n}"
+				},
+				{
+					"name": "Room_306",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"number\": \"306\",\r\n    \"type\": \"Family Suite\",\r\n    \"price\": \"6000\",\r\n    \"status\": \"occupied\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/rooms/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"rooms",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "190"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"be-EKVx7XM0nnIgPj1/C4F98wXrEDs\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Oct 2025 09:42:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"number\": \"306\",\n    \"type\": \"Family Suite\",\n    \"price\": 6000,\n    \"status\": \"occupied\",\n    \"_id\": \"68f20f823a0e5310b6187a4e\",\n    \"createdAt\": \"2025-10-17T09:42:26.560Z\",\n    \"updatedAt\": \"2025-10-17T09:42:26.560Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Room",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"number\": \"123\",\r\n    \"type\": \"Deluxe Double-bed Suite\",\r\n    \"price\": \"1200\",\r\n    \"status\": \"available\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/rooms/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"rooms",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "68f1f6fa18fe9dc9b4711bc2"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Room_104",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"number\": \"123\",\r\n    \"type\": \"Deluxe Double-bed Suite\",\r\n    \"price\": \"1200\",\r\n    \"status\": \"available\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/rooms/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"rooms",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "68f1f6fa18fe9dc9b4711bc2"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1a-yaGPqZp5m5MziY1bytw346ySoGM\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Oct 2025 09:40:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Room deleted\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Room",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"number\": \"104\",\r\n    \"type\": \"Standard Single-bed Suite\",\r\n    \"price\": 700,\r\n    \"status\": \"occupied\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/rooms/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"rooms",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "68f20f4b3a0e5310b6187a4c"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Room_104",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"number\": \"104\",\r\n    \"type\": \"Standard Single-bed Suite\",\r\n    \"price\": 700,\r\n    \"status\": \"occupied\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/rooms/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"rooms",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "68f20f4b3a0e5310b6187a4c"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "202"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ca-S3CqvvllFH/FkruzPK9k/Zd0fjo\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Oct 2025 09:46:22 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"68f20f4b3a0e5310b6187a4c\",\n    \"number\": \"104\",\n    \"type\": \"Standard Single-bed Suite\",\n    \"price\": 700,\n    \"status\": \"occupied\",\n    \"createdAt\": \"2025-10-17T09:41:31.543Z\",\n    \"updatedAt\": \"2025-10-17T09:46:22.270Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Retrieve Bookings",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Bookings",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"number\": \"123\",\r\n    \"type\": \"Deluxe Double-bed Suite\",\r\n    \"price\": \"1200\",\r\n    \"status\": \"available\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/bookings/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"bookings",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1521"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"5f1-CKLrq9wBmzzMwykkCi8RlSS84w0\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Oct 2025 10:06:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"68f2139b3a0e5310b6187a56\",\n        \"guestId\": \"68f20d673a0e5310b6187a3d\",\n        \"roomId\": \"68f20c513a0e5310b6187a31\",\n        \"checkInDate\": \"2025-10-25T00:00:00.000Z\",\n        \"checkOutDate\": \"2025-11-03T00:00:00.000Z\",\n        \"checkInTime\": \"2025-10-25T13:00:00.000Z\",\n        \"checkOutTime\": \"2025-11-03T05:30:00.000Z\",\n        \"status\": \"checked-in\",\n        \"createdAt\": \"2025-10-17T09:59:55.625Z\",\n        \"updatedAt\": \"2025-10-17T09:59:55.625Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"68f214643a0e5310b6187a59\",\n        \"guestId\": \"68f20d673a0e5310b6187a3d\",\n        \"roomId\": \"68f20c513a0e5310b6187a31\",\n        \"checkInDate\": \"2025-10-25T00:00:00.000Z\",\n        \"checkOutDate\": \"2025-11-03T00:00:00.000Z\",\n        \"checkInTime\": \"2025-10-25T13:00:00.000Z\",\n        \"checkOutTime\": \"2025-11-03T05:30:00.000Z\",\n        \"status\": \"checked-in\",\n        \"createdAt\": \"2025-10-17T10:03:16.800Z\",\n        \"updatedAt\": \"2025-10-17T10:03:16.800Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"68f214f53a0e5310b6187a5b\",\n        \"guestId\": \"68f20d673a0e5310b6187a3d\",\n        \"roomId\": \"68f20f4b3a0e5310b6187a4c\",\n        \"checkInDate\": \"2025-10-25T00:00:00.000Z\",\n        \"checkOutDate\": \"2025-11-03T00:00:00.000Z\",\n        \"checkInTime\": \"2025-10-25T13:00:00.000Z\",\n        \"checkOutTime\": \"2025-11-03T05:30:00.000Z\",\n        \"status\": \"booked\",\n        \"createdAt\": \"2025-10-17T10:05:41.387Z\",\n        \"updatedAt\": \"2025-10-17T10:05:41.387Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"68f215093a0e5310b6187a5d\",\n        \"guestId\": \"68f20d673a0e5310b6187a3d\",\n        \"roomId\": \"68f20f4b3a0e5310b6187a4c\",\n        \"checkInDate\": \"2025-10-25T00:00:00.000Z\",\n        \"checkOutDate\": \"2025-10-30T00:00:00.000Z\",\n        \"checkInTime\": \"2025-10-25T13:00:00.000Z\",\n        \"checkOutTime\": \"2025-11-03T05:30:00.000Z\",\n        \"status\": \"booked\",\n        \"createdAt\": \"2025-10-17T10:06:01.699Z\",\n        \"updatedAt\": \"2025-10-17T10:06:01.699Z\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"guestId\": \"68f20d673a0e5310b6187a3d\",\r\n    \"roomId\": \"68f20c513a0e5310b6187a31\",\r\n    \"checkInDate\": \"2025-10-25\",\r\n    \"checkOutDate\": \"2025-11-03\",\r\n    \"checkInTime\": \"2025-10-25T21:00:00+08:00\",\r\n    \"checkOutTime\": \"2025-11-03T13:30:00+08:00\",\r\n    \"status\": \"checked-in\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/bookings/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bookings",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Booking_1025-1103",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"guestId\": \"68f20d673a0e5310b6187a3d\",\r\n    \"roomId\": \"68f20c513a0e5310b6187a31\",\r\n    \"checkInDate\": \"2025-10-25\",\r\n    \"checkOutDate\": \"2025-11-03\",\r\n    \"checkInTime\": \"2025-10-25T21:00:00+08:00\",\r\n    \"checkOutTime\": \"2025-11-03T13:30:00+08:00\",\r\n    \"status\": \"checked-in\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/bookings/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"bookings",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "381"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"17d-IIxLpJELcwbzyXnNvnXe7KdNwDo\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Oct 2025 10:03:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"guestId\": \"68f20d673a0e5310b6187a3d\",\n    \"roomId\": \"68f20c513a0e5310b6187a31\",\n    \"checkInDate\": \"2025-10-25T00:00:00.000Z\",\n    \"checkOutDate\": \"2025-11-03T00:00:00.000Z\",\n    \"checkInTime\": \"2025-10-25T13:00:00.000Z\",\n    \"checkOutTime\": \"2025-11-03T05:30:00.000Z\",\n    \"status\": \"checked-in\",\n    \"_id\": \"68f214643a0e5310b6187a59\",\n    \"createdAt\": \"2025-10-17T10:03:16.800Z\",\n    \"updatedAt\": \"2025-10-17T10:03:16.800Z\",\n    \"__v\": 0\n}"
+				},
+				{
+					"name": "Booking_1025-1030",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"guestId\": \"68f20d673a0e5310b6187a3d\",\r\n    \"roomId\": \"68f20f4b3a0e5310b6187a4c\",\r\n    \"checkInDate\": \"2025-10-25\",\r\n    \"checkOutDate\": \"2025-10-30\",\r\n    \"checkInTime\": \"2025-10-25T21:00:00+08:00\",\r\n    \"checkOutTime\": \"2025-11-03T13:30:00+08:00\",\r\n    \"status\": \"booked\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/bookings/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"bookings",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "377"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"179-OCoO0lYodbzwfP2rs4JV+Gp3L+I\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Oct 2025 10:06:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"guestId\": \"68f20d673a0e5310b6187a3d\",\n    \"roomId\": \"68f20f4b3a0e5310b6187a4c\",\n    \"checkInDate\": \"2025-10-25T00:00:00.000Z\",\n    \"checkOutDate\": \"2025-10-30T00:00:00.000Z\",\n    \"checkInTime\": \"2025-10-25T13:00:00.000Z\",\n    \"checkOutTime\": \"2025-11-03T05:30:00.000Z\",\n    \"status\": \"booked\",\n    \"_id\": \"68f215093a0e5310b6187a5d\",\n    \"createdAt\": \"2025-10-17T10:06:01.699Z\",\n    \"updatedAt\": \"2025-10-17T10:06:01.699Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		}
+	]
+}

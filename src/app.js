@@ -15,5 +15,10 @@ app.use('/api', guestRoutes);
 app.use('/api', roomRoutes);
 app.use('/api', bookingRoutes);
 
+// Add a root route
+app.get('/', (req, res) => {
+    res.send('Welcome to the InnFlow API!');
+});
+
 // Export the app for Vercel
 module.exports = app;

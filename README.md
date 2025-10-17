@@ -67,3 +67,5 @@ Booking:
 }
 
 API URL: mongodb+srv://EmmanSomnia98:[REDACTED_BY_OWNER]@innflowdemo98.2exndjh.mongodb.net/?retryWrites=true&w=majority&appName=innflowdemo98
+
+You can also access the Postman collection here: https://github.com/EmmanSomnia98/innflow/blob/main/postman/innflow-postman-collection.json

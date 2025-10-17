@@ -1,7 +1,7 @@
 {
   "name": "innflow",
   "version": "1.0.0",
-  "description": "",
+  "description": "InnFlow backend application",
   "main": "src/app.js",
   "scripts": {
     "start": "node src/app.js",
@@ -17,7 +17,12 @@
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "mongoose": "^8.19.1",
-    "morgan": "^1.10.1",
+    "morgan": "^1.10.1"
+  },
+  "devDependencies": {
     "nodemon": "^3.1.10"
+  },
+  "engines": {
+    "node": "18.x"
   }
 }

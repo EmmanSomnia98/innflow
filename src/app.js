@@ -15,5 +15,5 @@ app.use('/api', guestRoutes);
 app.use('/api', roomRoutes);
 app.use('/api', bookingRoutes);
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+// Export the app for Vercel
+module.exports = app;

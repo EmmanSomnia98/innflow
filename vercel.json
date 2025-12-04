@@ -4,6 +4,6 @@
     {
       "src": "/api/(.*)",
       "dest": "src/app.js"
-    },
+    }
   ]
 }

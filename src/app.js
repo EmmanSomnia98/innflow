@@ -6,7 +6,6 @@ const connectDB = require('./db');
 const guestRoutes = require('./routes/guestRoutes');
 const roomRoutes = require('./routes/roomRoutes');
 const bookingRoutes = require('./routes/bookingRoutes');
-const path = require('path');
 
 dotenv.config();
 connectDB();
@@ -21,13 +20,11 @@ app.use('/api', guestRoutes);
 app.use('/api', roomRoutes);
 app.use('/api', bookingRoutes);
 
-// Serve static files from the "public" folder
-app.use(express.static(path.join(__dirname, '../public')));
-
-// Add a root route
-app.get('/', (req, res) => {
-    res.send('Welcome to the InnFlow API!');
+// Dynamic port for Render
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });
 
-// Export the app for Vercel
+// Export the app (optional, for testing or other uses)
 module.exports = app;

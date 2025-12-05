@@ -1,6 +1,8 @@
 # innflow
 
-Base URL: https://innflow.vercel.app/
+Base URL:
+Vercel: https://innflow.vercel.app/
+Render: https://innflow.onrender.com/
 
 ## Endpoints ##
 For guests:
